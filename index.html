@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Générateur de citations</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f5f5f5;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      color: #333;
+    }
+    #quote {
+      font-size: 24px;
+      margin: 40px 0;
+      color: #444;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #005fa3;
+    }
+  </style>
+</head>
+<body>
+  <h1>💬 Citation du jour</h1>
+  <p id="quote">Clique sur le bouton pour découvrir une citation !</p>
+  <button onclick="newQuote()">Nouvelle citation</button>
+
+  <script>
+    const quotes = [
+      "Le savoir est une arme.",
+      "Fais-le avec passion ou pas du tout.",
+      "Chaque jour est une nouvelle chance.",
+      "Tu n'échoues que si tu abandonnes.",
+      "Code. Teste. Améliore. Répète.",
+      "Petit à petit, tu construis du grand.",
+      "Le plus difficile, c’est de commencer."
+    ];
+
+    function newQuote() {
+      const randomIndex = Math.floor(Math.random() * quotes.length);
+      document.getElementById('quote').innerText = quotes[randomIndex];
+    }
+  </script>
+</body>
+</html>
